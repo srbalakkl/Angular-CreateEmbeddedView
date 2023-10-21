@@ -1,0 +1,18 @@
+<div style="border: 1px solid blue">
+  <div #container>
+
+  </div>
+  <ng-template #defaultHeader>
+    <div>Weather Forecast</div>
+    <div>Current Weather in Your Location</div>
+  </ng-template>
+</div>
+
+<div style="border: 1px solid red">
+  <div>{{state.data.skyCondition == 'sunny' ? '☀️' : '☁️'}}</div>
+  <div>{{state.data.temperature}}C</div>
+</div>
+<div style="border: 1px solid green">
+  <button (click)="actions.reload()" type="button">Reload</button>
+  <button (click)="actions.copyData()" type="button">Copy Info</button>
+</div>
